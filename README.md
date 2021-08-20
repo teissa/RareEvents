@@ -5,3 +5,7 @@ Functions ending in "Model" create responses using the specified model type. Fun
 
 Observations and responses from each model can be built using the "SyntheticDataGenerator". Model fitting procedures can be found in "syntheticDataFits" and uses data produced from "SyntheticDataGenerator".
 
+An example of the epirical mutual information computation is listed under "MIempiricalExample" and runs for both MI using observations of a given trial as well as including the previous trial. Bounds can be computed using "MIbound".
+
+Examples for the psychometric curves and bias, variance, noise metrics is given in "PsychometricExample"
+
