@@ -18,6 +18,7 @@ hL=0.05:0.05:1;
 Prare=hL;
 Pno=Prare;
 Pguess=hL;
+RareThresh=1:10;
 
 % noise values
 weightvar=0.01:0.02:1;
@@ -122,6 +123,17 @@ for k=1:blocknum % for each block
     rare=Prare(randi(length(Prare)));
     no=Pno(randi(length(Pno)));
     RareBall_Synth{k} = rareBallModel(rare, no, Balls{k},  trials, rareB ); %create responses
+end
+
+%% Variable Rare Ball
+
+for k=1:blocknum % for each block
+    [Balls{k}, Jars{k} ] = observationMaker( h(k),l(k), trials, obs); %create the ball draws
+    %randomly select parameters
+    rare=Prare(randi(length(Prare)));
+    no=Pno(randi(length(Pno)));
+    rareMax=RareThresh(randi(length(RareThresh)));
+    VarRareBall_Synth{k} = VarRareBallModel(rare, no, rareMax, Balls{k},  trials, rareB ); %create responses
 end
 
 %% History- Dependent Rare Ball
