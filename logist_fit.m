@@ -2,7 +2,7 @@ function fits_ = logist_fit(data)
 
 % NEW USING GLOBALSEARCH   
 % Define the error function
-errFcn = @(fits) logist_err_tahra(logist_val_tahra(fits', data(:,1:end-1)), data(:,end));
+errFcn = @(fits) logist_err(logist_val(fits', data(:,1:end-1)), data(:,end));
 
 % Set up the optimization problem
 problem = createOptimProblem('fmincon',    ...

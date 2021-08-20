@@ -1,4 +1,4 @@
-function [ posterior, a_MLE, p_MLE] = Prior_Fit(true_rho, noise, pr, trials, HT, true_scale, responses, rareBall, commonBall,Prior)
+function [ posterior, a_MLE, p_MLE] = Prior_Fit(true_rho, noise, pri, trials, HT, true_scale, responses, rareBall, commonBall,Prior)
 %posterior calculation for prior  bayesian model with rho set to the true
 %rho (true_rho). Noise are all values for noise variance, pr are the possible biased priors, trial are the
 %number of trials, HT are the observations of each trial, true_scale is the
@@ -8,7 +8,7 @@ function [ posterior, a_MLE, p_MLE] = Prior_Fit(true_rho, noise, pr, trials, HT,
 %Prior is the prior with respect to rho and noise (informed from pilot studies for Bayesian models. See informedPrior file) 
 
 
-posterior=ones(length(noise),length(pr));
+posterior=ones(length(noise),length(pri));
 for j=1:trials
      indR=find(HT{j}==rareBall);
      
@@ -25,9 +25,9 @@ for j=1:trials
          Bcount=0;
      end
     n=length(HT{j});
-    p_response_trial=zeros(length(noise),length(pr));
-    for p=1:length(pr)
-        pr=pr(p)*true_rho;
+    p_response_trial=zeros(length(noise),length(pri));
+    for p=1:length(pri)
+        pr=pri(p)*true_rho;
   
         for w=1:length(noise)
             wg=noise(w);

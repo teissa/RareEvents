@@ -5,7 +5,7 @@
 % with a high or low success rate, finds the curve of maximal predictive
 % accuracy for a fixed complexity.
 
-clear all
+clear 
 
 pH = 0.9;
 pL = 0.1;

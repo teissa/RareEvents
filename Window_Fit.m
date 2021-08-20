@@ -13,7 +13,7 @@ for b=1:length(windows)
 for j=1:trials
     bls=[];
     for k=1:j
-        bls=[bls; HT{k}];
+        bls=[bls; HT{k}'];
     end
     
     if length(bls)< ws

@@ -84,7 +84,7 @@ for k=1:blocknum % for each block
            states(ind)=b;
        end
 
-       [NBmi(k), ~] = MI(states,Noisy_Synth{k});
+       [NBmi(k), Nfr{k}] = MI(states,Noisy_Synth{k});
        
        clear rares commons
        %MI using trial based observations and previous response
@@ -108,7 +108,7 @@ for k=1:blocknum % for each block
            end
        end
        
-       [NBmiR(k) , ~]= MI(statesR,cur');
+       [NBmiR(k) , NfrR{k}]= MI(statesR,cur);
 end
 
 
