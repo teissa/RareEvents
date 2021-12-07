@@ -9,5 +9,5 @@ An example of the epirical mutual information computation is listed under "MIemp
 
 Examples for the psychometric curves and bias, variance, noise metrics is given in "PsychometricExample".
 
-
+Anonymized subject responses and task information are contained in "AnonymizedTaskData". For each of the 201 subjects, all recorded prompts and key presses were divided by relevant information: 1) "Blocks" identified the task block each key stroke is associated with. 0=Control, 1=Hard Asymmetric, 2= Hard Symmetric, 3=Easy Asymmetric, 4= Easy Symmetric. Prompts and directions are labeld as "nan"; 2) "Balls" identifies the particular sample of ball draws that were observed for a given trial, with -1=blue balls and 1=red balls. The common/ rare ball color was randomly selected for each subject. Subjects with rare red balls are listed in "RedRare" while subjects with rare blue balls are listed in "BlueRare"; 3) "Jar" lists the true jar for each trial; 4)"Responses" list the subject's response on each trial. All human data was analyzed using the same model fitting, mutual information, and psychometric function procedures as with synthetic data above. 
 
